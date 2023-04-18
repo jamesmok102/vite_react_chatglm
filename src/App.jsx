@@ -19,11 +19,21 @@ function App() {
   const resultRef = useRef(); // resultRef是result的引用
   const messagesRef = useRef(); // messagesRef是messages的引用
 
+  const meta = {
+    title: 'ChatGLM_6B_FP16',
+    meta: {
+        "http-equiv": "Content-Security-Policy",
+        content: "upgrade-insecure-requests"
+    }
+}
+
+
+
   let source;
 
-  useEffect(() => {
-    document.title = "ChatGLM_6B_FP16"
-  }, [])
+//   useEffect(() => {
+//     document.title = "ChatGLM_6B_FP16"
+//   }, [])
 
   useEffect(()=>{  
     //resultRef.current = result;
@@ -162,6 +172,7 @@ let handleClearBtnClicked = () => {
 
 
   return (
+    
       <Flex
           width={"100vw"}
           minHeight={"100vh"}
@@ -169,6 +180,7 @@ let handleClearBtnClicked = () => {
           justifyContent={"center"}
           bgGradient="linear(to-b, #7f7fd5, #91eae4)"
       >
+        <DocumentMeta {...meta} />
           <Box maxW="2xl" m="0 auto" mr="0" p="20px" minHeight={"100vh"}>
               <Card minW="xl" maxH={"95vh"} >
                   <CardHeader>
