@@ -5,6 +5,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { SSE } from "sse";
 import ReactMarkdown from "react-markdown";
 import {Remarkable} from "remarkable";
+import DocumentMeta from "react-document-meta";
 
 function App() {
  
