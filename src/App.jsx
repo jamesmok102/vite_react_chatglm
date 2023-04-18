@@ -14,7 +14,7 @@ function App() {
   let [isLoading, setIsLoading] = useState(false); // isLoading表示是否正在加载中
   let [result, setResult] = useState(""); // result是OpenAI API返回的结果
   const toast = useToast(); // toast是Chakra UI提供的轻量级通知组件
-  const url = import.meta.env.VITE_CHATGLM_STREAM_API;
+  const url = import.meta.env.VITE_CHATGLM_STREAM_API || $VITE_CHATGLM_STREAM_API;
 
   const resultRef = useRef(); // resultRef是result的引用
   const messagesRef = useRef(); // messagesRef是messages的引用
