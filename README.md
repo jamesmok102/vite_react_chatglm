@@ -9,7 +9,7 @@
 
 ## 食用方法
 1. 在你的ChatGLM配置好上面提供API
-2. 在增目新建.env.local文件然後增加環境變量
+2. 在項目根目錄新建.env.local文件然後增加環境變量
 ```
 VITE_CHATGLM_STREAM_API = "http://你的API/stream"
 ```
